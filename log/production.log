@@ -1,0 +1,164 @@
+I, [2014-10-08T14:28:22.700504 #10890]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 14:28:22 +0530
+F, [2014-10-08T14:28:22.780708 #10890] FATAL -- : 
+PG::ConnectionBad (FATAL:  database "test_job_prod" does not exist
+):
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `initialize'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `new'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:831:in `connect'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:548:in `initialize'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.2) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.2) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:51:in `restore_query_cache_settings'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:43:in `rescue in call'
+  activerecord (4.0.2) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (4.0.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__37029610__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-10-08T14:29:03.884555 #10934]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 14:29:03 +0530
+I, [2014-10-08T14:29:03.930631 #10934]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T14:29:03.964656 #10934]  INFO -- :   Rendered website_urls/_index.html.erb (11.9ms)
+I, [2014-10-08T14:29:03.964937 #10934]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (16.4ms)
+I, [2014-10-08T14:29:03.966986 #10934]  INFO -- : Completed 200 OK in 36ms (Views: 15.4ms | ActiveRecord: 4.4ms)
+I, [2014-10-08T14:29:04.026515 #10934]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 14:29:04 +0530
+F, [2014-10-08T14:29:04.027742 #10934] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-10-08T14:29:04.028645 #10934]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 14:29:04 +0530
+F, [2014-10-08T14:29:04.029693 #10934] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2014-10-08T14:29:43.508630 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 14:29:43 +0530
+I, [2014-10-08T14:29:43.547929 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T14:29:43.582466 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (9.6ms)
+I, [2014-10-08T14:29:43.582599 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (15.4ms)
+I, [2014-10-08T14:29:43.583676 #10956]  INFO -- : Completed 200 OK in 36ms (Views: 12.5ms | ActiveRecord: 5.2ms)
+I, [2014-10-08T14:29:43.645155 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 14:29:43 +0530
+I, [2014-10-08T14:29:43.706370 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 14:29:43 +0530
+I, [2014-10-08T14:29:46.104577 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 14:29:46 +0530
+I, [2014-10-08T15:02:55.522782 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:02:55 +0530
+I, [2014-10-08T15:02:55.524855 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:02:55.529906 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.8ms)
+I, [2014-10-08T15:02:55.530221 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (3.8ms)
+I, [2014-10-08T15:02:55.531410 #10956]  INFO -- : Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+I, [2014-10-08T15:03:29.375800 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:03:29 +0530
+I, [2014-10-08T15:03:29.376951 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:03:29.380676 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.2ms)
+I, [2014-10-08T15:03:29.380932 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (2.8ms)
+I, [2014-10-08T15:03:29.381871 #10956]  INFO -- : Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+I, [2014-10-08T15:03:29.455610 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 15:03:29 +0530
+I, [2014-10-08T15:03:29.460812 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 15:03:29 +0530
+I, [2014-10-08T15:03:29.572264 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 15:03:29 +0530
+I, [2014-10-08T15:03:40.414733 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:03:40 +0530
+I, [2014-10-08T15:03:40.415491 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:03:40.418606 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.4ms)
+I, [2014-10-08T15:03:40.418878 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (2.5ms)
+I, [2014-10-08T15:03:40.419877 #10956]  INFO -- : Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+I, [2014-10-08T15:03:40.493445 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 15:03:40 +0530
+I, [2014-10-08T15:03:40.497206 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 15:03:40 +0530
+I, [2014-10-08T15:03:40.614363 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 15:03:40 +0530
+I, [2014-10-08T15:04:55.781118 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:04:55 +0530
+I, [2014-10-08T15:04:55.782215 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:04:55.786135 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.3ms)
+I, [2014-10-08T15:04:55.786437 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (3.0ms)
+I, [2014-10-08T15:04:55.787335 #10956]  INFO -- : Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.7ms)
+I, [2014-10-08T15:04:55.841478 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 15:04:55 +0530
+I, [2014-10-08T15:04:55.845585 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 15:04:55 +0530
+I, [2014-10-08T15:04:55.953157 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 15:04:55 +0530
+I, [2014-10-08T15:04:57.876345 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:04:57 +0530
+I, [2014-10-08T15:04:57.877727 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:04:57.881943 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.3ms)
+I, [2014-10-08T15:04:57.882328 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (3.2ms)
+I, [2014-10-08T15:04:57.883323 #10956]  INFO -- : Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+I, [2014-10-08T15:04:57.956241 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 15:04:57 +0530
+I, [2014-10-08T15:04:57.959030 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 15:04:57 +0530
+I, [2014-10-08T15:04:58.053534 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 15:04:58 +0530
+I, [2014-10-08T15:05:39.628842 #10956]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-10-08 15:05:39 +0530
+I, [2014-10-08T15:05:39.629941 #10956]  INFO -- : Processing by WebsiteUrlsController#index as HTML
+I, [2014-10-08T15:05:39.632667 #10956]  INFO -- :   Rendered website_urls/_index.html.erb (1.0ms)
+I, [2014-10-08T15:05:39.632800 #10956]  INFO -- :   Rendered website_urls/index.html.erb within layouts/application (1.9ms)
+I, [2014-10-08T15:05:39.633274 #10956]  INFO -- : Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+I, [2014-10-08T15:05:39.687687 #10956]  INFO -- : Started GET "/assets/application-e72964b7e903d92073a5b8c2ac18c318.css" for 127.0.0.1 at 2014-10-08 15:05:39 +0530
+I, [2014-10-08T15:05:39.690510 #10956]  INFO -- : Started GET "/assets/application-ddb0a4d89fafb217db12b375318c90d0.js" for 127.0.0.1 at 2014-10-08 15:05:39 +0530
+I, [2014-10-08T15:05:39.795648 #10956]  INFO -- : Started GET "/assets/background-pattern.svg" for 127.0.0.1 at 2014-10-08 15:05:39 +0530
